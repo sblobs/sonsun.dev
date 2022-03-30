@@ -13,7 +13,12 @@ html, body, #root {
 }
 
 #root {
-  background-image: linear-gradient(to bottom, #020043, #391e69, #617585);
+  background-image: linear-gradient(
+    to bottom, 
+    #070725, 
+    #2c2b4a, 
+    #656269
+  );
   position: absolute;
 }
 
@@ -30,7 +35,7 @@ code {
 .fade-enter.fade-enter-active {
   opacity: 1;
   transform: translate(0, 0);
-  transition: opacity 250ms ease-out, transform 300ms ease;
+  transition: opacity 100ms ease-out, transform 300ms ease;
 }
 .fade-exit {
   opacity: 1;
@@ -40,5 +45,5 @@ code {
   opacity: 0;
   transform: translate(0, 30px);
 
-  transition: opacity 250ms ease-out, transform 300ms ease;
+  transition: opacity 100ms ease-out, transform 300ms ease;
 }

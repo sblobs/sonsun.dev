@@ -9,6 +9,8 @@
 .title {
   font-size: 22px;
   cursor: pointer;
+  z-index: 10;
+  /* text-shadow: 0 0 10px rgb(75, 75, 75), 0 0 20px #2c2b4a, 0 0 30px #2c2b4a, 0 0 40px #2c2b4a, 0 0 50px #2c2b4a, 0 0 60px #2c2b4a, 0 0 70px #2c2b4a; */
 }
 
 .title:hover {
@@ -20,18 +22,18 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  width: 50%;
+  width: 20vw;
   height: 150px;
   margin-top: 30px;
   box-sizing: border-box;
-  background-color: rgba(25,25,25, 0.25);
-  border: 1px solid rgb(230, 230, 230);
+  background-color: rgba(25,25,25, 0.5);
+  border: 1px solid rgb(169, 185, 207);
   border-radius: 5px;
   overflow: hidden;
 }
 
 .btn_mid {
-  border-top: 1px solid rgb(230, 230, 230);
+  border-top: 1px solid rgb(169, 185, 207);
 }
 
 .btn_first {
@@ -40,7 +42,7 @@
 
 @media(max-width: 600px) {
   .main {
-    width: 70%;
+    width: 70vw;
     box-sizing: border-box;
   }
   .navBar {
