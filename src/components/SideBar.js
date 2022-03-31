@@ -6,9 +6,9 @@ import styles from './SideBar.module.css';
 const SideBar = () => {
   const navigate = useNavigate();
   return <div className={styles.main}>
-    <span className={styles.title} onClick={
+    <div className={styles.title} onClick={
       () => { navigate('/home') }
-    }> Sonia Sun </span>
+    }> Sonia Sun </div>
     <div className={styles.navBar}>
       <SideBtn onClickRoute={'/about'} text={'about'} first></SideBtn>
       <SideBtn onClickRoute={'/projects'} text={'projects'}></SideBtn>

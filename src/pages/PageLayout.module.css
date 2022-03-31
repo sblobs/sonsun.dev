@@ -10,12 +10,17 @@
   justify-content: center;
 }
 
+.iconWrapper {
+  background-color: aqua;
+  right: 0px;
+}
+
 .content {
   font-weight: 200;
   flex: 6;
   margin-right: 13%;
   padding: 10px;
-  background-color: rgba(25,25,25, 0.25);
+  background-color: rgba(25,25,25, 0.4);
 }
 
 .homelink {

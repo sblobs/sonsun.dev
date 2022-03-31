@@ -2,7 +2,7 @@
   letter-spacing: 1.5px;
   font-weight: 300;
   font-size: 16px;
-  height: 100vh;
+  height: 86vh;
   color: rgb(230, 230, 230);
   display: flex;
   flex-direction: column;
@@ -13,7 +13,7 @@
 .textBanner {
   width: 67vw;
   height: 67vh;
-  /* background-color: rgba(0, 0, 0, 0.25); */
+  /* background-color: rgba(0, 0, 0, 0.25); TODO: */
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -23,7 +23,7 @@
 
 .title {
   font-size: 22px;
-  /* text-shadow: 0 0 10px rgb(75, 75, 75), 0 0 20px #2c2b4a, 0 0 30px #2c2b4a, 0 0 40px #2c2b4a, 0 0 50px #2c2b4a, 0 0 60px #2c2b4a, 0 0 70px #2c2b4a; */
+  font-weight: 300;
 }
 
 .content {

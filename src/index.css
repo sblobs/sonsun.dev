@@ -13,11 +13,16 @@ html, body, #root {
 }
 
 #root {
-  background-image: linear-gradient(
+  /* background-image: linear-gradient(
     to bottom, 
     #070725, 
     #2c2b4a, 
     #656269
+  ); TODO: */
+  background-image: linear-gradient(
+    to bottom, 
+    #070725, 
+    #2c2b4a
   );
   position: absolute;
 }

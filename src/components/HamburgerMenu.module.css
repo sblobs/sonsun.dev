@@ -1,9 +1,11 @@
 .main {
-  flex: 5;
+  right: 0;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
+  align-items: center;
+  height: 10vh;
+  margin-top: 30px;
 }
 
 .title {
@@ -12,12 +14,11 @@
   z-index: 10;
   display: inline-block;
   position: relative;
-  /* TODO: text-shadow: 0 0 10px rgb(75, 75, 75), 0 0 20px #2c2b4a, 0 0 30px #2c2b4a, 0 0 40px #2c2b4a, 0 0 50px #2c2b4a, 0 0 60px #2c2b4a, 0 0 70px #2c2b4a; */
 }
 
 /*  CSS snippet below: “Hover underline animation” is licensed under CC-BY-4.0.
  *  Source: https://www.30secondsofcode.org/css/s/hover-underline-animation */
-.title:after {
+ .title:after {
   content: '';
   position: absolute;
   width: 100%;
@@ -35,34 +36,19 @@
   transform-origin: bottom left;
 }
 
-.navBar {
+
+.iconWrapper {
+  position: absolute;
+  right: 15vw;
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  flex-direction: row;
   justify-content: center;
-  width: 20vw;
-  height: 150px;
-  margin-top: 30px;
-  box-sizing: border-box;
-  background-color: rgba(25,25,25, 0.5);
-  border: 1px solid rgb(169, 185, 207);
-  border-radius: 5px;
-  overflow: hidden;
+  align-items: center;
+  cursor: pointer;
 }
 
-.btn_mid {
-  border-top: 1px solid rgb(169, 185, 207);
-}
-
-.btn_first {
-  border: none;
-}
-
-@media(max-width: 600px) {
+@media(min-width: 600px) {
   .main {
-    display: none;
-  }
-  .title {
     display: none;
   }
 }
