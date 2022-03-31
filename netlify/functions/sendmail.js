@@ -50,8 +50,6 @@ exports.handler = async (event, context, callback) => {
             <p>${data.msg}</p>`
   };
 
-  //const transporter = await createTransporter();
-  
   async function sendEmail(oldEmail, newEmail) {
     const transporter = await createTransporter();
     try {
@@ -66,76 +64,5 @@ exports.handler = async (event, context, callback) => {
       callback(error);
     }
   }
-
   await sendEmail();
-
-
-  // transporter.sendMail(emailOptions, (error, info) => {
-  //   console.log("sending..");
-  //   if (error) {
-  //     console.log(error);
-  //     callback(error);
-  //   } else {
-  //     console.log('success');
-  //     callback(null, {
-  //       statusCode: 200,
-  //       body: 'OK'
-  //     });
-  //   }
-  // });
-
-  // try {
-  //   emailTransporter.sendMail(emailOptions, (error, info) => {
-  //     if (error) {
-  //       console.log(error);
-  //       throw new Error(err);
-  //     } else {
-  //       return {
-  //         statusCode: 200,
-  //         body: JSON.stringify({ 'result': 'success' })
-  //       }
-  //     }
-  //   });
-  // } catch (err) {
-  //   console.log('sendEmail error is', err);
-  //   return err;
-  // }
-
-  // const sendEmail = async (emailOptions) => {
-  //   try { 
-  //     const emailTransporter = await createTransporter();
-  //     // emailTransporter.sendMail(emailOptions, (err, info) => {
-  //     //   if (err) {
-  //     //     console.log(err);
-  //     //     throw new Error(err);
-  //     //   } else {
-  //     //     return info;
-  //     //   }
-  //     // })
-  //     return emailTransporter.sendMail(emailOptions);
-  //   } catch (err) {
-  //     console.log('sendMail error is', err);
-  //     return err;
-  //   }
-  // };
-  
-  // try {
-  //   await sendEmail({
-  //     from: process.env.MAIL_SENDER,
-  //     to: process.env.MAIL_RECEIVER,
-  //     subject: `Message from ${data.name}`,
-  //     html:  `
-  //       <h3>Message from ${data.name} ${data.email}: </h3>
-  //       <p>${data.msg}</p>
-  //     `
-  //   });
-  //   console.log('sent successfully');
-  //   return {
-  //     statusCode: 200,
-  //     body: JSON.stringify({ 'result': 'success' })
-  //   }
-  // } catch (err) {
-  //   console.log('sendEmail error is', err);
-  //   return err;
-  // }
 }
