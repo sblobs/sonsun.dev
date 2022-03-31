@@ -30,6 +30,8 @@ exports.handler = async (event, context, callback) => {
       service: 'gmail',
       auth: {
         type: 'OAuth2',
+        port: 465,
+        secure: true,
         user: process.env.MAIL_SENDER,
         accessToken,
         clientId: process.env.CLIENT_ID,
