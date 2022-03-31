@@ -49,9 +49,9 @@ exports.handler = async (event, context, callback) => {
       emailTransporter.sendMail(emailOptions, (err, info) => {
         if (err) {
           console.log(err);
-          reject(err)
+          throw new Error(err);
         } else {
-          resolve(info);
+          return info;
         }
       })
     } catch (err) {
