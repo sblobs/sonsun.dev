@@ -27,57 +27,115 @@ exports.handler = async (event, context, callback) => {
     });
 
     const transporter = nodemailer.createTransport({
-      service: 'gmail',
+      host: 'smtp.gmail.com',
+      port: 465,
+      secure: true,
       auth: {
         type: 'OAuth2',
-        port: 465,
-        secure: true,
         user: process.env.MAIL_SENDER,
-        accessToken,
         clientId: process.env.CLIENT_ID,
         clientSecret: process.env.CLIENT_SECRET,
-        refreshToken: process.env.REFRESH_TOKEN
-      },
-      tls: {
-        rejectUnauthorized: false,
-      },
+        refreshToken: process.env.REFRESH_TOKEN,
+        accessToken
+      }
     });
     return transporter;
   };
 
-  const sendEmail = async (emailOptions) => {
-    try {
-      const emailTransporter = await createTransporter();
-      emailTransporter.sendMail(emailOptions, (err, info) => {
-        if (err) {
-          console.log(err);
-          throw new Error(err);
-        } else {
-          return info;
-        }
-      })
-    } catch (err) {
-      console.log('sendMail error is', err);
-      return err;
-    }
+  const emailOptions = {
+    from: process.env.MAIL_SENDER,
+    to: process.env.MAIL_RECEIVER,
+    subject: `Message from ${data.name}`,
+    html:  `<h3>Message from ${data.name} ${data.email}: </h3>
+            <p>${data.msg}</p>`
   };
+
+  //const transporter = await createTransporter();
   
-  try {
-    await sendEmail({
-      from: process.env.MAIL_SENDER,
-      to: process.env.MAIL_RECEIVER,
-      subject: `Message from ${data.name}`,
-      html:  `
-        <h3>Message from ${data.name} ${data.email}: </h3>
-        <p>${data.msg}</p>
-      `
-    });
-    return {
-      statusCode: 200,
-      body: JSON.stringify({ 'result': 'success' })
+  async function sendEmail(oldEmail, newEmail) {
+    const transporter = await createTransporter();
+    try {
+      const info = await transporter.sendMail(emailOptions);
+      console.log('Email sent: ' + info.response);
+      callback(null, {
+        statusCode: 200,
+        body: 'OK'
+      });
+    } catch (error) {
+      console.log(error);
+      callback(error);
     }
-  } catch (err) {
-    console.log('sendEmail error is', err);
-    return err;
   }
+
+  await sendEmail();
+
+
+  // transporter.sendMail(emailOptions, (error, info) => {
+  //   console.log("sending..");
+  //   if (error) {
+  //     console.log(error);
+  //     callback(error);
+  //   } else {
+  //     console.log('success');
+  //     callback(null, {
+  //       statusCode: 200,
+  //       body: 'OK'
+  //     });
+  //   }
+  // });
+
+  // try {
+  //   emailTransporter.sendMail(emailOptions, (error, info) => {
+  //     if (error) {
+  //       console.log(error);
+  //       throw new Error(err);
+  //     } else {
+  //       return {
+  //         statusCode: 200,
+  //         body: JSON.stringify({ 'result': 'success' })
+  //       }
+  //     }
+  //   });
+  // } catch (err) {
+  //   console.log('sendEmail error is', err);
+  //   return err;
+  // }
+
+  // const sendEmail = async (emailOptions) => {
+  //   try { 
+  //     const emailTransporter = await createTransporter();
+  //     // emailTransporter.sendMail(emailOptions, (err, info) => {
+  //     //   if (err) {
+  //     //     console.log(err);
+  //     //     throw new Error(err);
+  //     //   } else {
+  //     //     return info;
+  //     //   }
+  //     // })
+  //     return emailTransporter.sendMail(emailOptions);
+  //   } catch (err) {
+  //     console.log('sendMail error is', err);
+  //     return err;
+  //   }
+  // };
+  
+  // try {
+  //   await sendEmail({
+  //     from: process.env.MAIL_SENDER,
+  //     to: process.env.MAIL_RECEIVER,
+  //     subject: `Message from ${data.name}`,
+  //     html:  `
+  //       <h3>Message from ${data.name} ${data.email}: </h3>
+  //       <p>${data.msg}</p>
+  //     `
+  //   });
+  //   console.log('sent successfully');
+  //   return {
+  //     statusCode: 200,
+  //     body: JSON.stringify({ 'result': 'success' })
+  //   }
+  // } catch (err) {
+  //   console.log('sendEmail error is', err);
+  //   return err;
+  // }
 }
