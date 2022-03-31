@@ -3,12 +3,12 @@ import styles from './PageLayout.module.css';
 import SideBar from '../components/SideBar';
 import HamburgerMenu from '../components/HamburgerMenu';
 import CircularProgress from '@mui/material/CircularProgress';
+import ErrorOutlineIcon from '@mui/icons-material/ErrorOutline';
 
 const ContactPage = () => {
   const [name, setName] = React.useState('');
   const [email, setEmail] = React.useState('');
   const [msg, setMsg] = React.useState('');
-  // const [sent, setSent] = React.useState(false);
   const [error, setError] = React.useState('');
   const [showingError, setShowingError] = React.useState(false);
   const [showingSuccess, setShowingSuccess] = React.useState(false);
@@ -22,7 +22,6 @@ const ContactPage = () => {
 
   // Validate input
   const sendEmail = async () => {
-    setLoading(true);
     if (name === '') {
       setError('Please enter your name');
       setShowingSuccess(false);
@@ -36,6 +35,7 @@ const ContactPage = () => {
       setShowingSuccess(false);
       setShowingError(true);
     } else {
+      setLoading(true);
       const request = {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -90,20 +90,27 @@ const ContactPage = () => {
       {loading && <div className={styles.loading}>
         <CircularProgress size={20} color='inherit'/>
       </div>}
+
       <div className={`${styles.alert} ${styles.alertSuccess}
         ${showingSuccess ? styles.alertShown : styles.alertHidden}`}
         onTransitionEnd={ () => {
           setShowingSuccess(false);
         }}>
-        Message sent successfully :)
+        <div className={styles.alertMsg}>
+          Message sent successfully :)
+        </div>
       </div>
       <div className={`${styles.alert} ${styles.alertError}
-        ${showingError ? styles.alertShown : styles.alertHidden}`}
+        ${showingError ? (styles.alertShown) : styles.alertHidden}`}
         onTransitionEnd={ () => {
           setShowingError(false);
         }}>
-        {error}
+        <div className={styles.alertMsg}>
+          <ErrorOutlineIcon className={styles.errorIcon} sx={{ fontSize: 20 }}/>
+          {error}
+        </div>
       </div>
+
     </div>
     <div className={styles.mobileFooter}></div>
   </div>

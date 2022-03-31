@@ -93,12 +93,17 @@ textarea {
   opacity: 50;
   position: absolute;
   margin: 8px 12px;
-  display: inline-block;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 200;
   font-size: 14px;
   border-radius: 5px;
   background-color: #1b1b2d;
+  color: white;
   box-sizing: border-box;
+  height: 28.5px;
+  width: 240px;
 }
 
 .alertSuccess {
@@ -126,11 +131,26 @@ textarea {
   transition: all 250ms linear 3s;
 }
 
+.alertMsg {
+  height: 28.5px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.errorIcon {
+  margin-right: 7px;
+}
+
 @media(max-width: 600px) {
   .alert {
     position: absolute;
     bottom: 0;
     left: 0;
+    width: 90%;
+    box-shadow: none;
   }
 
   .mobileFooter {
