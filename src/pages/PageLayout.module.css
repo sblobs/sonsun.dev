@@ -73,6 +73,18 @@ textarea {
   background-color: rgba(104, 103, 138, 0.35);
 }
 
+.loading {
+  position: absolute;
+  margin: 8px 8px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 5px;
+  padding: 5px;
+  box-sizing: border-box;
+  height: 28.5px;
+}
+
 .mobileFooter {
   display: none;
 }

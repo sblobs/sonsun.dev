@@ -2,6 +2,7 @@ import React from 'react';
 import styles from './PageLayout.module.css';
 import SideBar from '../components/SideBar';
 import HamburgerMenu from '../components/HamburgerMenu';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const ContactPage = () => {
   const [name, setName] = React.useState('');
@@ -11,6 +12,7 @@ const ContactPage = () => {
   const [error, setError] = React.useState('');
   const [showingError, setShowingError] = React.useState(false);
   const [showingSuccess, setShowingSuccess] = React.useState(false);
+  const [loading, setLoading] = React.useState(false);
 
   const checkEmail = (e) => {
     return String(e)
@@ -19,24 +21,38 @@ const ContactPage = () => {
   }
 
   // Validate input
-  const sendEmail = () => {
+  const sendEmail = async () => {
+    setLoading(true);
     if (name === '') {
-      setError('Please enter your name!');
+      setError('Please enter your name');
       setShowingSuccess(false);
       setShowingError(true);
     } else if (msg === '') {
-      setError('Please enter a message!');
+      setError('Please enter a message');
       setShowingSuccess(false);
       setShowingError(true);
     } else if (!checkEmail(email)) {
-      setError('Please enter a valid email!');
+      setError('Please enter a valid email');
       setShowingSuccess(false);
       setShowingError(true);
     } else {
-      setName('');
-      setEmail('');
-      setMsg('');
-      setShowingSuccess(true);
+      const request = {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ name, email, msg }),
+      }
+      try {
+        const res = await fetch('/.netlify/functions/sendmail', request);
+        if (res.status === 200) {
+          setName('');
+          setEmail('');
+          setMsg('');
+          setLoading(false);
+          setShowingSuccess(true);
+        }
+      } catch (err) {
+        console.log(err);
+      }
     }
   }
 
@@ -71,6 +87,9 @@ const ContactPage = () => {
       />
       <br />
       <button className={styles.sendBtn} onClick={sendEmail}>Send</button>
+      {loading && <div className={styles.loading}>
+        <CircularProgress size={20} color='inherit'/>
+      </div>}
       <div className={`${styles.alert} ${styles.alertSuccess}
         ${showingSuccess ? styles.alertShown : styles.alertHidden}`}
         onTransitionEnd={ () => {
