@@ -20,6 +20,7 @@ const NotFoundPage = () => {
       </span>
       &nbsp;to return to the homepage.
     </div>
+    <div className={styles.mobileFooter}></div>
   </div>
 }
 

@@ -8,8 +8,9 @@ const ProjectsPage = () => {
     <HamburgerMenu />
     <SideBar />
     <div className={styles.content}>
-      Projects...
+      Projects page in progress
     </div>
+    <div className={styles.mobileFooter}></div>
   </div>
 }
 

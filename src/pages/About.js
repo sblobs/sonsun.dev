@@ -10,8 +10,9 @@ const AboutPage = () => {
     <HamburgerMenu />
     <SideBar />
     <div className={styles.content}>
-      About...
+      About page in progress
     </div>
+    <div className={styles.mobileFooter}></div>
   </div>
 }
 

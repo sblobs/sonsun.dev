@@ -1,26 +1,31 @@
 .main {
   letter-spacing: 1.5px;
-  font-weight: 300;
+  font-weight: 200;
   color: rgb(230, 230, 230);
-  height: 85%;
+  height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
-  align-items: center;
   justify-content: center;
 }
 
-.iconWrapper {
-  background-color: aqua;
-  right: 0px;
+.title {
+  font-size: 20px;
+  font-weight: 200;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  border-bottom: 1px solid rgb(169, 185, 207);
+  text-align: center;
 }
 
 .content {
-  font-weight: 200;
+  align-self: center;
+  font-size: 14px;
   flex: 6;
   margin-right: 13%;
   padding: 10px;
   background-color: rgba(25,25,25, 0.4);
+  border-radius: 5px;
 }
 
 .homelink {
@@ -29,8 +34,98 @@
   border-bottom: 1px solid rgb(208, 255, 249);
 }
 
+.inputField {
+  letter-spacing: 1.5px;
+  font-weight: 200;
+  font-size: 14px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid rgb(169, 185, 207);
+  padding: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  border-radius: 5px;
+  font-family: inherit;
+  margin: 8px 0px;
+}
+
+textarea {
+  resize: none;
+  height: 100px;
+}
+
+.sendBtn {
+  background-color: transparent;
+  font-family: inherit;
+  font-weight: inherit;
+  font-size: 14px;
+  letter-spacing: 1.5px;
+  color: white;
+  border: 1px solid rgb(169, 185, 207);
+  border-radius: 5px;
+  padding: 5px;
+  cursor: pointer;
+  margin: 8px 0px;
+  display: inline-block;
+}
+
+.sendBtn:hover {
+  background-color: rgba(104, 103, 138, 0.35);
+}
+
+.mobileFooter {
+  display: none;
+}
+
+.alert {
+  opacity: 50;
+  position: absolute;
+  margin: 8px 12px;
+  display: inline-block;
+  font-weight: 200;
+  font-size: 14px;
+  border-radius: 5px;
+  background-color: #1b1b2d;
+  box-sizing: border-box;
+}
+
+.alertSuccess {
+  color: #bed8a9;
+  border: 1px solid #bed8a9;
+}
+
+.alertError {
+  color: #e6acb2;
+  border: 1px solid #e6acb2;
+}
+
+.alertSuccess, .alertError {
+  box-sizing: border-box;
+  padding: 5px;
+}
+
+.alertShown {
+  opacity: 50;
+  transition: all 250ms linear 0.01s;
+}
+
+.alertHidden {
+  opacity: 0;
+  transition: all 250ms linear 3s;
+}
 
 @media(max-width: 600px) {
+  .alert {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+
+  .mobileFooter {
+    flex: 4;
+    display: block;
+  }
+
   .main {
     flex-direction: column;
   }
@@ -38,5 +133,9 @@
     margin: 0;
     width: 70%;
     box-sizing: border-box;
+  }
+  textarea {
+    resize: none;
+    height: 20vh;
   }
 }

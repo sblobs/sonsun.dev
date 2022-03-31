@@ -2,7 +2,7 @@
   letter-spacing: 1.5px;
   font-weight: 300;
   font-size: 16px;
-  height: 86vh;
+  height: 89vh;
   color: rgb(230, 230, 230);
   display: flex;
   flex-direction: column;
@@ -29,10 +29,10 @@
 .content {
   font-weight: 200;
   text-align: center;
-  font-size: 15px;
-  width: 50vw;
+  font-size: 14px;
+  width: 45vw;
   margin: 20px 0px;
-  padding: 15px;
+  padding: 15px 0px;
   display: flex;
   flex-direction: column;
   align-items: center;
