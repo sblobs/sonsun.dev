@@ -20,20 +20,17 @@ const ContactPage = () => {
       .match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/);
   }
 
-  // Validate input
   const sendEmail = async () => {
+    // Validate input
     if (name === '') {
       setError('Please enter your name');
-      setShowingSuccess(false);
-      setShowingError(true);
+      handleErrorShow();
     } else if (msg === '') {
       setError('Please enter a message');
-      setShowingSuccess(false);
-      setShowingError(true);
+      handleErrorShow();
     } else if (!checkEmail(email)) {
       setError('Please enter a valid email');
-      setShowingSuccess(false);
-      setShowingError(true);
+      handleErrorShow();
     } else {
       setLoading(true);
       const request = {
@@ -48,12 +45,26 @@ const ContactPage = () => {
           setEmail('');
           setMsg('');
           setLoading(false);
-          setShowingSuccess(true);
+          handleSuccessShow();
         }
       } catch (err) {
         console.log(err);
       }
     }
+  }
+
+  const handleErrorShow = () => {
+    setShowingError(true);
+    setTimeout(() => {
+      setShowingError(false)
+    }, 300);
+  }
+
+  const handleSuccessShow = () => {
+    setShowingSuccess(true);
+    setTimeout(() => {
+      setShowingSuccess(false);
+    }, 300);
   }
 
   return <div className={styles.main}>
@@ -92,19 +103,13 @@ const ContactPage = () => {
       </div>}
 
       <div className={`${styles.alert} ${styles.alertSuccess}
-        ${showingSuccess ? styles.alertShown : styles.alertHidden}`}
-        onTransitionEnd={ () => {
-          setShowingSuccess(false);
-        }}>
+        ${showingSuccess ? styles.alertShown : styles.alertHidden}`}>
         <div className={styles.alertMsg}>
           Message sent successfully :)
         </div>
       </div>
       <div className={`${styles.alert} ${styles.alertError}
-        ${showingError ? (styles.alertShown) : styles.alertHidden}`}
-        onTransitionEnd={ () => {
-          setShowingError(false);
-        }}>
+        ${showingError ? (styles.alertShown) : styles.alertHidden}`}>
         <div className={styles.alertMsg}>
           <ErrorOutlineIcon className={styles.errorIcon} sx={{ fontSize: 20 }}/>
           {error}

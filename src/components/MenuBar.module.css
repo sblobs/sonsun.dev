@@ -30,7 +30,7 @@
     border: none;
 }
 
-@media(max-width: 600px) {
+@media(max-width: 662px) {
     .navBar {
         flex-direction: column;
         height: 150px;

@@ -128,7 +128,7 @@ textarea {
 
 .alertShown {
   opacity: 50;
-  transition: all 250ms linear 0.01s;
+  transition: all 250ms linear;
 }
 
 .alertHidden {
@@ -149,17 +149,9 @@ textarea {
   margin-right: 7px;
 }
 
-@media(max-width: 600px) {
-  .alert {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 90%;
-    box-shadow: none;
-  }
-
+@media(max-width: 662px) {
   .mobileFooter {
-    flex: 4;
+    flex-grow: 1;
     display: block;
   }
 
@@ -170,9 +162,20 @@ textarea {
     margin: 0;
     width: 70%;
     box-sizing: border-box;
+    background-color: transparent;
   }
   textarea {
     resize: none;
     height: 20vh;
+  }
+}
+
+@media(max-width: 462px) {
+  .alert {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 90%;
+    box-shadow: none;
   }
 }
