@@ -12,12 +12,11 @@
 .title {
   letter-spacing: 1.5px;
   font-size: 19px;
-  font-weight: 200;
   padding-bottom: 10px;
   margin-bottom: 10px;
   border-bottom: 1px solid rgb(169, 185, 207);
   text-align: center;
-  font-weight: 280;
+  font-weight: 400;
   font-family: Inter, sans-serif;
 }
 
