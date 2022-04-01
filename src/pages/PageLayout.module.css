@@ -7,6 +7,7 @@
   flex-direction: row;
   justify-content: center;
   color: rgb(226, 226, 226);
+  position: relative;
 }
 
 .title {
@@ -17,7 +18,7 @@
   font-weight: 420;
   font-family: Inter, sans-serif;
   font-size: 19.5px;
-  letter-spacing: 1.2px;
+  letter-spacing: 1.6px;
   cursor: default;
   font-weight: 420;
   font-family: Inter, sans-serif;
@@ -69,8 +70,8 @@ textarea {
   font-weight: inherit;
   font-size: 14px;
   letter-spacing: 1.3px;
-  color: rgb(217, 229, 247);
-  border: 1px solid rgb(226, 226, 226);
+  color: rgb(226, 226, 226);
+  border: 1px solid rgb(169, 185, 207);
   border-radius: 5px;
   padding: 5px;
   cursor: pointer;
@@ -91,7 +92,7 @@ textarea {
   border-radius: 5px;
   padding: 5px;
   box-sizing: border-box;
-  height: 28.5px;
+  height: 29.5px;
 }
 
 .mobileFooter {
@@ -109,8 +110,7 @@ textarea {
   font-size: 14px;
   border-radius: 5px;
   background-color: #1b1b2d;
-  box-sizing: border-box;
-  height: 28.5px;
+  height: 29.5px;
   width: 240px;
 }
 
@@ -136,7 +136,7 @@ textarea {
 
 .alertHidden {
   opacity: 0;
-  transition: all 250ms linear 3s;
+  transition: all 250ms linear;
 }
 
 .alertMsg {
@@ -153,6 +153,15 @@ textarea {
 }
 
 @media(max-width: 662px) {
+  .alert {
+    position: fixed;
+    bottom: 2%;
+    left: 2.5%;
+    width: 95%;
+    box-shadow: none;
+    margin: 0;
+  }
+
   .mobileFooter {
     flex-grow: 1;
     display: block;
@@ -169,11 +178,12 @@ textarea {
   }
   textarea {
     resize: none;
-    height: 20vh;
+    height: 27%;
   }
 }
 
-@media(max-width: 462px) {
+/* TODO: */
+/* @media(max-width: 462px) {
   .alert {
     position: absolute;
     bottom: 0;
@@ -181,4 +191,4 @@ textarea {
     width: 90%;
     box-shadow: none;
   }
-}
+} */

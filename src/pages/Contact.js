@@ -13,6 +13,7 @@ const ContactPage = () => {
   const [showingError, setShowingError] = React.useState(false);
   const [showingSuccess, setShowingSuccess] = React.useState(false);
   const [loading, setLoading] = React.useState(false);
+  const [timeoutHandles, setTimeoutHandles] = React.useState([]);
 
   const checkEmail = (e) => {
     return String(e)
@@ -55,16 +56,26 @@ const ContactPage = () => {
 
   const handleErrorShow = () => {
     setShowingError(true);
-    setTimeout(() => {
-      setShowingError(false)
-    }, 300);
+    timeoutHandles.forEach((item) => {
+      clearTimeout(item);
+    })
+    setTimeoutHandles([]);
+    const t = setTimeout(() => {
+      setShowingError(false);
+    }, 5000);
+    setTimeoutHandles([...timeoutHandles, t]);
   }
 
   const handleSuccessShow = () => {
     setShowingSuccess(true);
-    setTimeout(() => {
+    timeoutHandles.forEach((item) => {
+      clearTimeout(item);
+    })
+    setTimeoutHandles([]);
+    const t = setTimeout(() => {
       setShowingSuccess(false);
-    }, 300);
+    }, 5000);
+    setTimeoutHandles([...timeoutHandles, t]);
   }
 
   return <div className={styles.main}>
@@ -88,7 +99,7 @@ const ContactPage = () => {
         value={email}
         onChange={ e => setEmail(e.target.value) }
       />
-      Your message <br />
+      Message <br />
       <textarea
         className={styles.inputField}
         name='message'

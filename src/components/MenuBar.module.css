@@ -1,6 +1,7 @@
 .main {
     width: 100%;
     display: flex;
+    display: -webkit-flexbox;
     flex-direction: column;
     align-items: center;
     justify-content: center;
@@ -11,8 +12,10 @@
     height: 48px;
     width: 43vw;
     max-width: 530px;
-    display: flex;
     flex-direction: row;
+    display: flex;
+    -webkit-align-items: center;
+    -webkit-justify-content: center;
     align-items: center;
     justify-content: center;
     box-sizing: border-box;
@@ -23,20 +26,24 @@
 }
 
 .btn_mid {
+    -webkit-flex: 1;
+    flex: 1;
     border-left: 1px solid rgb(169, 185, 207);
 }
 
 .btn_first {
+    -webkit-flex: 1;
+    flex: 1;
     border: none;
 }
 
 @media(max-width: 662px) {
     .navBar {
         flex-direction: column;
-        height: 150px;
+        height: 151px;
     }
     .btn_mid {
         border-left: none;
-        border-top: 1px solid rgb(230, 230, 230);
+        border-top: 1px solid rgb(226, 226, 226);
     }
 }

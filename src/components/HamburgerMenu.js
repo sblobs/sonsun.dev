@@ -26,6 +26,7 @@ const HamburgerMenu = () => {
         aria-haspopup="true"
         aria-expanded={open ? 'true' : undefined}
         onClick={handleClick}
+        sx={{ fontSize: 23 }}
       />
       <Menu
         id="menu"
