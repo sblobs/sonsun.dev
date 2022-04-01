@@ -9,6 +9,8 @@ import ContactPage from './pages/Contact';
 import ProjectsPage from './pages/Projects';
 import NotFoundPage from './pages/404';
 
+import './fonts/Inter-VariableFont_slnt,wght.ttf'
+
 const App = () => {
   const location = useLocation();
   const particleOptions = {

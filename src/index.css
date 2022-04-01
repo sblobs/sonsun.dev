@@ -7,18 +7,18 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+@font-face {
+  font-family: Inter;
+  src: local('Inter'), url(./fonts/Inter-VariableFont_slnt,wght.ttf) format('truetype-variations');
+  font-weight: 1 999;
+}
+
 html, body, #root {
   height: 100vh;
   width: 100vw;
 }
 
 #root {
-  /* background-image: linear-gradient(
-    to bottom, 
-    #070725, 
-    #2c2b4a, 
-    #656269
-  ); TODO: */
   background-image: linear-gradient(
     to bottom, 
     #070725, 

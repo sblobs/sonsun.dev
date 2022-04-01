@@ -1,8 +1,8 @@
 .main {
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
   font-weight: 300;
   font-size: 16px;
-  height: 89vh;
+  height: 90vh;
   color: rgb(230, 230, 230);
   display: flex;
   flex-direction: column;
@@ -22,17 +22,19 @@
 }
 
 .title {
-  font-size: 22px;
-  font-weight: 300;
+  letter-spacing: 1.5px;
+  font-size: 31px;
+  font-weight: 400;
+  font-family: Inter, sans-serif;
 }
 
 .content {
   font-weight: 200;
   text-align: center;
-  font-size: 14px;
+  font-size: 13.5px;
   width: 45vw;
-  margin: 20px 0px;
-  padding: 15px 0px;
+  margin: 15px 0px;
+  padding: 7px 0px 18px 0;
   display: flex;
   flex-direction: column;
   align-items: center;

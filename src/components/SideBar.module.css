@@ -8,12 +8,14 @@
 }
 
 .title {
+  letter-spacing: 1.5px;
   font-size: 22px;
   cursor: pointer;
   z-index: 10;
   display: inline-block;
   position: relative;
-  /* TODO: text-shadow: 0 0 10px rgb(75, 75, 75), 0 0 20px #2c2b4a, 0 0 30px #2c2b4a, 0 0 40px #2c2b4a, 0 0 50px #2c2b4a, 0 0 60px #2c2b4a, 0 0 70px #2c2b4a; */
+  font-weight: 300;
+  font-family: Inter, sans-serif;
 }
 
 /*  CSS snippet below: “Hover underline animation” is licensed under CC-BY-4.0.
@@ -43,7 +45,7 @@
   justify-content: center;
   width: 20vw;
   height: 150px;
-  margin-top: 30px;
+  margin-top: 20px;
   box-sizing: border-box;
   background-color: rgba(25,25,25, 0.5);
   border: 1px solid rgb(169, 185, 207);
