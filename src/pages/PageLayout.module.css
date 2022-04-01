@@ -14,11 +14,14 @@
   margin-bottom: 10px;
   border-bottom: 1px solid rgb(169, 185, 207);
   text-align: center;
-  font-weight: 400;
+  font-weight: 420;
   font-family: Inter, sans-serif;
   font-size: 19.5px;
-  letter-spacing: 1.45px;
+  letter-spacing: 1.2px;
   cursor: default;
+  font-weight: 420;
+  font-family: Inter, sans-serif;
+  font-size: 23.5px;
 }
 
 .content {
@@ -29,7 +32,7 @@
   padding: 10px;
   background-color: rgba(25,25,25, 0.4);
   border-radius: 5px;
-  letter-spacing: 1.4px;
+  letter-spacing: 1.3px;
   font-family: Inter, sans-serif;
   cursor: default;
 }
@@ -41,7 +44,7 @@
 }
 
 .inputField {
-  letter-spacing: 1.5px;
+  letter-spacing: 1.4px;
   font-weight: 200;
   font-size: 14px;
   background-color: transparent;
@@ -65,7 +68,7 @@ textarea {
   font-family: inherit;
   font-weight: inherit;
   font-size: 14px;
-  letter-spacing: 1.5px;
+  letter-spacing: 1.3px;
   color: rgb(217, 229, 247);
   border: 1px solid rgb(226, 226, 226);
   border-radius: 5px;

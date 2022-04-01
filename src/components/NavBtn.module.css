@@ -10,7 +10,7 @@
   transition: background-color .3s;
   z-index: 10;
   /* TODO: */
-  letter-spacing: 1.4px;
+  letter-spacing: 1.3px;
   font-size: 14px;
   font-family: Inter, sans-serif; 
 }
