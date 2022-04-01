@@ -5,17 +5,19 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  color: rgb(226, 226, 226);
 }
 
 .title {
+  color: rgb(226, 226, 226);
   letter-spacing: 1.5px;
-  font-size: 22px;
   cursor: pointer;
   z-index: 10;
   display: inline-block;
   position: relative;
   font-weight: 400;
   font-family: Inter, sans-serif;
+  font-size: 23px;
 }
 
 /*  CSS snippet below: “Hover underline animation” is licensed under CC-BY-4.0.
@@ -28,7 +30,7 @@
   height: 1.5px;
   bottom: 0;
   left: 0;
-  background-color: rgb(230, 230, 230);
+  background-color: rgb(226, 226, 226);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }

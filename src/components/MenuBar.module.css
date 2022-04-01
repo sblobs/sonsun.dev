@@ -9,7 +9,8 @@
   
 .navBar {
     height: 48px;
-    width: 45vw;
+    width: 43vw;
+    max-width: 530px;
     display: flex;
     flex-direction: row;
     align-items: center;

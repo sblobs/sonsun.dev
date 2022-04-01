@@ -10,6 +10,7 @@ import ProjectsPage from './pages/Projects';
 import NotFoundPage from './pages/404';
 
 import './fonts/Inter-VariableFont_slnt,wght.ttf'
+import './fonts/Domine-VariableFont_wght.ttf'
 
 const App = () => {
   const location = useLocation();
