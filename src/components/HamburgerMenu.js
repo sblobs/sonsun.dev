@@ -16,40 +16,42 @@ const HamburgerMenu = () => {
     setAnchorEl(null);
   };
   return <div className={styles.main}>
-    <div className={styles.title} onClick={
-      () => { navigate('/home') }
-    }> Sonia Sun </div>
-    <div className={styles.iconWrapper}>
-      <MenuIcon
-        id="menu-button"
-        aria-controls={open ? 'menu' : undefined}
-        aria-haspopup="true"
-        aria-expanded={open ? 'true' : undefined}
-        onClick={handleClick}
-        sx={{ fontSize: 23 }}
-      />
-      <Menu
-        id="menu"
-        anchorEl={anchorEl}
-        open={open}
-        onClose={handleClose}
-        MenuListProps={{
-          'aria-labelledby': 'menu-button',
-        }}
-      >
-      <MenuItem onClick={ () => {
-        handleClose();
-        navigate('/about')
-      } }>About</MenuItem>
-      <MenuItem onClick={ () => {
-        handleClose();
-        navigate('/projects')
-      } }>Projects</MenuItem>
-      <MenuItem onClick={ () => {
-        handleClose();
-        navigate('/Contact')
-      } }>Contact</MenuItem>
-      </Menu>
+    <div className={styles.wrapper}>
+      <div className={styles.title} onClick={
+        () => { navigate('/home') }
+      }> Sonia Sun </div>
+      <div className={styles.iconWrapper}>
+        <MenuIcon
+          id="menu-button"
+          aria-controls={open ? 'menu' : undefined}
+          aria-haspopup="true"
+          aria-expanded={open ? 'true' : undefined}
+          onClick={handleClick}
+          sx={{ fontSize: 23 }}
+        />
+        <Menu
+          id="menu"
+          anchorEl={anchorEl}
+          open={open}
+          onClose={handleClose}
+          MenuListProps={{
+            'aria-labelledby': 'menu-button',
+          }}
+        >
+        <MenuItem onClick={ () => {
+          handleClose();
+          navigate('/about')
+        } }>About</MenuItem>
+        <MenuItem onClick={ () => {
+          handleClose();
+          navigate('/projects')
+        } }>Projects</MenuItem>
+        <MenuItem onClick={ () => {
+          handleClose();
+          navigate('/Contact')
+        } }>Contact</MenuItem>
+        </Menu>
+      </div>
     </div>
   </div>
 };

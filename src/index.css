@@ -22,15 +22,17 @@ body {
 html, body, #root {
   height: 100%;
   width: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #2c2b4a;
 }
 
-#root {
+body {
   background-image: linear-gradient(
     to bottom, 
     #070725, 
     #2c2b4a
   );
-  position: absolute;
 }
 
 code {

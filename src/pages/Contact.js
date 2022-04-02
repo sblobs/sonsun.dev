@@ -108,25 +108,27 @@ const ContactPage = () => {
         onChange={ e => setMsg(e.target.value) }
       />
       <br />
-      <button className={styles.sendBtn} onClick={sendEmail}>Send</button>
-      {loading && <div className={styles.loading}>
-        <CircularProgress size={20} color='inherit'/>
-      </div>}
+      <div className={styles.sendWrapper}>
+        <button className={styles.sendBtn} onClick={sendEmail}>Send</button>
+        {loading &&
+        <div className={styles.loading}>
+          <CircularProgress size={20} color='inherit'/>
+        </div>}
 
-      <div className={`${styles.alert} ${styles.alertSuccess}
-        ${showingSuccess ? styles.alertShown : styles.alertHidden}`}>
-        <div className={styles.alertMsg}>
-          Message sent successfully :)
+        <div className={`${styles.alert} ${styles.alertSuccess}
+          ${showingSuccess ? styles.alertShown : styles.alertHidden}`}>
+          <div className={styles.alertMsg}>
+            Message sent successfully :)
+          </div>
+        </div>
+        <div className={`${styles.alert} ${styles.alertError}
+          ${showingError ? (styles.alertShown) : styles.alertHidden}`}>
+          <div className={styles.alertMsg}>
+            <ErrorOutlineIcon className={styles.errorIcon} sx={{ fontSize: 20 }}/>
+            {error}
+          </div>
         </div>
       </div>
-      <div className={`${styles.alert} ${styles.alertError}
-        ${showingError ? (styles.alertShown) : styles.alertHidden}`}>
-        <div className={styles.alertMsg}>
-          <ErrorOutlineIcon className={styles.errorIcon} sx={{ fontSize: 20 }}/>
-          {error}
-        </div>
-      </div>
-
     </div>
     <div className={styles.mobileFooter}></div>
   </div>

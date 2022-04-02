@@ -1,7 +1,7 @@
 .btn {
   font-weight: 200;
   text-transform: capitalize;
-  height: 49px;
+  height: 100%;
   width: 100%;
   color: rgb(226, 226, 226);
   cursor: pointer;
@@ -34,4 +34,10 @@
 
 .btn:hover {
   background-color: rgba(104, 103, 138, 0.35);
+}
+
+@media(max-width: 662px) {
+  .btn{
+    font-size: 12px;
+  }
 }

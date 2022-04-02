@@ -8,6 +8,7 @@
   justify-content: center;
   color: rgb(226, 226, 226);
   position: relative;
+  font-size: 13.5px;
 }
 
 .title {
@@ -27,7 +28,6 @@
 
 .content {
   align-self: center;
-  font-size: 14px;
   flex: 6;
   margin-right: 13%;
   padding: 10px;
@@ -47,7 +47,7 @@
 .inputField {
   letter-spacing: 1.4px;
   font-weight: 200;
-  font-size: 14px;
+  font-size: 13.5px;
   background-color: transparent;
   color: white;
   border: 1px solid rgb(169, 185, 207);
@@ -64,11 +64,15 @@ textarea {
   height: 100px;
 }
 
+.sendWrapper {
+  position: relative;
+}
+
 .sendBtn {
   background-color: transparent;
   font-family: inherit;
   font-weight: inherit;
-  font-size: 14px;
+  font-size: 13.5px;
   letter-spacing: 1.3px;
   color: rgb(226, 226, 226);
   border: 1px solid rgb(169, 185, 207);
@@ -107,7 +111,7 @@ textarea {
   align-items: center;
   justify-content: center;
   font-weight: 200;
-  font-size: 14px;
+  font-size: 13.5px;
   border-radius: 5px;
   background-color: #1b1b2d;
   height: 29.5px;
@@ -153,13 +157,10 @@ textarea {
 }
 
 @media(max-width: 662px) {
-  .alert {
-    position: fixed;
-    bottom: 2%;
-    left: 2.5%;
-    width: 95%;
-    box-shadow: none;
-    margin: 0;
+  .main{
+    font-size: 12px;
+    height: 90%;
+    flex-direction: column;
   }
 
   .mobileFooter {
@@ -167,13 +168,14 @@ textarea {
     display: block;
   }
 
-  .main {
-    flex-direction: column;
+  .sendBtn {
+    font-size: 12px;
   }
+
   .content {
     margin: 0;
-    width: 70%;
-    box-sizing: border-box;
+    width: 85%;
+    padding: 0;
     background-color: transparent;
   }
   textarea {
@@ -182,13 +184,13 @@ textarea {
   }
 }
 
-/* TODO: */
-/* @media(max-width: 462px) {
+@media(max-width: 462px) {
   .alert {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 90%;
+    position: fixed;
+    bottom: 2%;
+    left: 2.5%;
+    width: 95%;
     box-shadow: none;
+    margin: 0;
   }
-} */
+}

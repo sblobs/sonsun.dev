@@ -9,8 +9,8 @@
   }
   
 .navBar {
-    height: 48px;
-    width: 43vw;
+    height: 47px;
+    width: 50vw;
     max-width: 530px;
     flex-direction: row;
     display: flex;
@@ -40,10 +40,11 @@
 @media(max-width: 662px) {
     .navBar {
         flex-direction: column;
-        height: 151px;
+        height: 120px;
+        width: 36vw;
     }
     .btn_mid {
         border-left: none;
-        border-top: 1px solid rgb(226, 226, 226);
+        border-top: 1px solid rgb(169, 185, 207);
     }
 }

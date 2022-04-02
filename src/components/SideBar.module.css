@@ -20,7 +20,7 @@
   font-size: 22.5px;
 }
 
-/*  CSS snippet below: “Hover underline animation” is licensed under CC-BY-4.0.
+/*  CSS snippet below: “Hover underline animation” licensed under CC-BY-4.0.
  *  Source: https://www.30secondsofcode.org/css/s/hover-underline-animation */
 .title:after {
   content: '';
@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: center;
   width: 19.5vw;
-  height: 151px;
+  height: 140px;
   margin-top: 18px;
   box-sizing: border-box;
   background-color: rgba(25,25,25, 0.5);
