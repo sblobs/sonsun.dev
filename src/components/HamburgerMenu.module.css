@@ -8,7 +8,7 @@
   height: 9vh;
   box-sizing: border-box;
   margin-bottom: 3vh;
-  border-bottom: 1px solid rgb(169, 185, 207);
+  border-bottom: 1px solid rgb(203, 216, 235);
 }
 
 .wrapper {
@@ -23,7 +23,7 @@
   z-index: 10;
   display: inline-block;
   color: rgb(245, 245, 245);
-  letter-spacing: 1.5px;
+  letter-spacing: 1px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   font-size: 20px;

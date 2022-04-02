@@ -95,10 +95,10 @@ const App = () => {
       <CSSTransition key={location.key} classNames='fade' timeout={300}>
         <Routes location={location}>
           <Route path='/' element={<HomePage />} />
-          <Route path='/home' element={<HomePage />} />
-          <Route path='/about' element={<AboutPage />} />
-          <Route path='/contact' element={<ContactPage />} />
-          <Route path='/projects' element={<ProjectsPage />} />
+          <Route path='home' element={<HomePage />} />
+          <Route path='about' element={<AboutPage />} />
+          <Route path='contact' element={<ContactPage />} />
+          <Route path='projects' element={<ProjectsPage />} />
           <Route path='*' element={<NotFoundPage />} />
         </Routes>
       </CSSTransition>
