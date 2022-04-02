@@ -1,5 +1,5 @@
 .btn {
-  font-weight: 410;
+  font-weight: 400;
   text-transform: capitalize;
   height: 100%;
   width: 100%;
@@ -7,8 +7,8 @@
   cursor: pointer;
   transition: background-color .3s;
   z-index: 10;
-  letter-spacing: 1.3px;
-  font-size: 14px;
+  letter-spacing: 1px;
+  font-size: 15px;
   font-family: Inter, sans-serif; 
   align-items: center;
   justify-content: center;
@@ -38,6 +38,6 @@
 
 @media(max-width: 662px) {
   .btn{
-    font-size: 13px;
+    font-size: 14px;
   }
 }

@@ -1,7 +1,7 @@
 .main {
-  letter-spacing: 1.3px;
-  font-weight: 410;
-  font-size: 14px;
+  letter-spacing: 1px;
+  font-weight: 400;
+  font-size: 15px;
   height: 90.6vh;
   color: rgb(245, 245, 245);
   display: flex;
@@ -13,8 +13,8 @@
 }
 
 .title {
-  font-size: 30.3px;
-  letter-spacing: 1.7px;
+  font-size: 31px;
+  letter-spacing: 1.6px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   cursor: default;
@@ -25,7 +25,7 @@
   text-align: center;
   width: 55vw;
   margin: 10px 0px;
-  padding: 5px 0px 16px 0;
+  padding: 6px 0px 16px 0;
   cursor: default;
   display: flex;
   flex-direction: column;
@@ -40,8 +40,7 @@
 
 @media(max-width: 662px) {
   .main{
-    font-size: 12.5px;
-    height: 90%;
+    font-size: 14px;
   }
 
   .title {
