@@ -25,7 +25,12 @@ const App = () => {
         resize: true,
         onhover: {
           enable: true,
-          mode: 'connect'
+          mode: 'connect',
+          parallax: {
+            enable: true,
+            force: 130,
+            smooth: 6,
+          }
         },
       },
       modes: {

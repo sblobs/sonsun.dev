@@ -11,7 +11,7 @@
 .navBar {
     height: 45px;
     width: 50vw;
-    max-width: 530px;
+    max-width: 460px;
     flex-direction: row;
     display: flex;
     -webkit-align-items: center;
@@ -20,7 +20,7 @@
     justify-content: center;
     box-sizing: border-box;
     background-color: rgba(25,25,25, 0.4);
-    border: 1px solid rgb(169, 185, 207);
+    border: 1px solid rgb(203, 216, 235);
     border-radius: 5px;
     overflow: hidden;
 }
@@ -28,7 +28,7 @@
 .btn_mid {
     -webkit-flex: 1;
     flex: 1;
-    border-left: 1px solid rgb(169, 185, 207);
+    border-left: 1px solid rgb(203, 216, 235);
 }
 
 .btn_first {
@@ -45,6 +45,6 @@
     }
     .btn_mid {
         border-left: none;
-        border-top: 1px solid rgb(169, 185, 207);
+        border-top: 1px solid rgb(203, 216, 235);
     }
 }

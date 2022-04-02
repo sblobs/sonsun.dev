@@ -1,25 +1,25 @@
 .main {
   letter-spacing: 1.3px;
-  font-weight: 350;
+  font-weight: 410;
   height: 100%;
   width: 100%;
   display: flex;
   flex-direction: row;
   justify-content: center;
-  color: rgb(226, 226, 226);
+  color: rgb(245, 245, 245);
   position: relative;
-  font-size: 13.5px;
+  font-size: 14px;
 }
 
 .title {
   padding-bottom: 10px;
   margin-bottom: 10px;
-  border-bottom: 1px solid rgb(169, 185, 207);
+  border-bottom: 1px solid rgb(203, 216, 235);
   text-align: center;
   font-weight: 420;
   font-family: Inter, sans-serif;
   font-size: 19.5px;
-  letter-spacing: 1.6px;
+  letter-spacing: 1.1px;
   cursor: default;
   font-size: 23.5px;
   font-family: 'Lato', sans-serif;
@@ -47,10 +47,10 @@
 .inputField {
   letter-spacing: 1.4px;
   font-weight: 200;
-  font-size: 13.5px;
+  font-size: 14px;
   background-color: transparent;
   color: white;
-  border: 1px solid rgb(169, 185, 207);
+  border: 1px solid rgb(203, 216, 235);
   padding: 5px;
   box-sizing: border-box;
   width: 100%;
@@ -72,10 +72,10 @@ textarea {
   background-color: transparent;
   font-family: inherit;
   font-weight: inherit;
-  font-size: 13.5px;
+  font-size: 14px;
   letter-spacing: 1.3px;
   color: rgb(226, 226, 226);
-  border: 1px solid rgb(169, 185, 207);
+  border: 1px solid rgb(203, 216, 235);
   border-radius: 5px;
   padding: 5px;
   cursor: pointer;
@@ -111,7 +111,7 @@ textarea {
   align-items: center;
   justify-content: center;
   font-weight: 200;
-  font-size: 13.5px;
+  font-size: 14px;
   border-radius: 5px;
   background-color: #1b1b2d;
   height: 29.5px;
@@ -158,7 +158,7 @@ textarea {
 
 @media(max-width: 662px) {
   .main{
-    font-size: 12px;
+    font-size: 13px;
     height: 90%;
     flex-direction: column;
   }

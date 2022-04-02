@@ -5,12 +5,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  color: rgb(226, 226, 226);
+  color: rgb(245, 245, 245);
 }
 
 .title {
-  color: rgb(226, 226, 226);
-  letter-spacing: 1.5px;
+  color: rgb(245, 245, 245);
+  letter-spacing: 1px;
   cursor: pointer;
   z-index: 10;
   display: inline-block;
@@ -30,7 +30,7 @@
   height: 1.5px;
   bottom: 0;
   left: 0;
-  background-color: rgb(226, 226, 226);
+  background-color: rgb(245, 245, 245);
   transform-origin: bottom right;
   transition: transform 0.25s ease-out;
 }
@@ -50,13 +50,13 @@
   margin-top: 15px;
   box-sizing: border-box;
   background-color: rgba(25,25,25, 0.5);
-  border: 1px solid rgb(169, 185, 207);
+  border: 1px solid rgb(203, 216, 235);
   border-radius: 5px;
   overflow: hidden;
 }
 
 .btn_mid {
-  border-top: 1px solid rgb(169, 185, 207);
+  border-top: 1px solid rgb(203, 216, 235);
 }
 
 .btn_first {

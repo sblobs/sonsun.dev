@@ -1,9 +1,9 @@
 .btn {
-  font-weight: 350;
+  font-weight: 410;
   text-transform: capitalize;
   height: 100%;
   width: 100%;
-  color: rgb(226, 226, 226);
+  color: rgb(245, 245, 245);
   cursor: pointer;
   transition: background-color .3s;
   z-index: 10;
@@ -38,6 +38,6 @@
 
 @media(max-width: 662px) {
   .btn{
-    font-size: 12px;
+    font-size: 13px;
   }
 }
