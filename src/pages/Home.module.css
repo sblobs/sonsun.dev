@@ -25,8 +25,8 @@
 .content {
   text-align: center;
   width: 55vw;
-  margin: 15px 0px;
-  padding: 7px 0px 16.5px 0;
+  margin: 10px 0px;
+  padding: 5px 0px 16px 0;
   cursor: default;
   display: flex;
   flex-direction: column;
