@@ -1,6 +1,6 @@
 .main {
   letter-spacing: 1.3px;
-  font-weight: 200;
+  font-weight: 350;
   height: 100%;
   width: 100%;
   display: flex;
@@ -21,9 +21,9 @@
   font-size: 19.5px;
   letter-spacing: 1.6px;
   cursor: default;
-  font-weight: 420;
-  font-family: Inter, sans-serif;
   font-size: 23.5px;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
 }
 
 .content {

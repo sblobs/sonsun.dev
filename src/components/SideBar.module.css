@@ -15,8 +15,8 @@
   z-index: 10;
   display: inline-block;
   position: relative;
-  font-weight: 400;
-  font-family: Inter, sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
   font-size: 22.5px;
 }
 
@@ -46,7 +46,7 @@
   align-items: center;
   justify-content: center;
   width: 19.5vw;
-  height: 140px;
+  height: 135px;
   margin-top: 18px;
   box-sizing: border-box;
   background-color: rgba(25,25,25, 0.5);

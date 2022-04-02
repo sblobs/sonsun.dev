@@ -1,6 +1,6 @@
 .main {
   letter-spacing: 1.3px;
-  font-weight: 200;
+  font-weight: 350;
   font-size: 13.5px;
   height: 90.6vh;
   color: rgb(226, 226, 226);
@@ -14,10 +14,10 @@
 
 .title {
   letter-spacing: 1.7px;
-  font-weight: 450;
   font-size: 30px;
   letter-spacing: 1.7px;
-  font-family: Inter, sans-serif;
+  font-family: 'Lato', sans-serif;
+  font-weight: bold;
   cursor: default;
   text-align: center;
 }
@@ -50,6 +50,6 @@
   }
 
   .content {
-    width: 70vw;
+    width: 85vw;
   }
 }

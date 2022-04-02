@@ -9,7 +9,7 @@
   }
   
 .navBar {
-    height: 47px;
+    height: 45px;
     width: 50vw;
     max-width: 530px;
     flex-direction: row;
@@ -40,8 +40,8 @@
 @media(max-width: 662px) {
     .navBar {
         flex-direction: column;
-        height: 120px;
-        width: 36vw;
+        height: 130px;
+        width: 48vw;
     }
     .btn_mid {
         border-left: none;

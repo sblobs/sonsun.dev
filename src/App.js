@@ -11,6 +11,8 @@ import NotFoundPage from './pages/404';
 
 import './fonts/Inter-VariableFont_slnt,wght.ttf'
 import './fonts/Domine-VariableFont_wght.ttf'
+import './fonts/Lato-Regular.ttf'
+import './fonts/Lato-Bold.ttf'
 
 const App = () => {
   const location = useLocation();
