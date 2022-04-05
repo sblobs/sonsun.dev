@@ -15,14 +15,15 @@ const ContactPage = () => {
   const [loading, setLoading] = React.useState(false);
   const [timeoutHandles, setTimeoutHandles] = React.useState([]);
 
+  // Check email input
   const checkEmail = (e) => {
     return String(e)
       .toLowerCase()
       .match(/[a-z0-9!#$%&'*+/=?^_`{|}~-]+(?:\.[a-z0-9!#$%&'*+/=?^_`{|}~-]+)*@(?:[a-z0-9](?:[a-z0-9-]*[a-z0-9])?\.)+[a-z0-9](?:[a-z0-9-]*[a-z0-9])?/);
   }
 
+  // Validate input and send email if input is valid
   const sendEmail = async () => {
-    // Validate input
     if (name === '') {
       setError('Please enter your name');
       handleErrorShow();
@@ -54,13 +55,14 @@ const ContactPage = () => {
     }
   }
 
+  // Show alerts
   const handleErrorShow = () => {
     setShowingError(true);
     timeoutHandles.forEach((item) => {
       clearTimeout(item);
     })
-    setTimeoutHandles([]);
     const t = setTimeout(() => {
+      setTimeoutHandles([]);
       setShowingError(false);
     }, 5000);
     setTimeoutHandles([...timeoutHandles, t]);
@@ -71,8 +73,8 @@ const ContactPage = () => {
     timeoutHandles.forEach((item) => {
       clearTimeout(item);
     })
-    setTimeoutHandles([]);
     const t = setTimeout(() => {
+      setTimeoutHandles([]);
       setShowingSuccess(false);
     }, 5000);
     setTimeoutHandles([...timeoutHandles, t]);

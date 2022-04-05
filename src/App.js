@@ -27,7 +27,7 @@ const App = () => {
           enable: true,
           mode: 'connect',
           parallax: {
-            enable: true,
+            enable: false,
             force: 130,
             smooth: 6,
           }
