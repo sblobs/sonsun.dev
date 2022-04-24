@@ -1,7 +1,7 @@
 .main {
   letter-spacing: 1px;
-  font-weight: 400;
-  font-size: 15px;
+  font-weight: 300;
+  font-size: 16px;
   height: 90.6vh;
   color: rgb(245, 245, 245);
   display: flex;
@@ -13,8 +13,8 @@
 }
 
 .title {
-  font-size: 31px;
-  letter-spacing: 1.6px;
+  font-size: 32px;
+  letter-spacing: 1.8px;
   font-family: 'Lato', sans-serif;
   font-weight: bold;
   cursor: default;
@@ -38,7 +38,7 @@
   transform:scale(1.1, 1.1);
 }
 
-@media(max-width: 662px) {
+@media(max-width: 711px) {
   .main{
     font-size: 14px;
   }

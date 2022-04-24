@@ -1,7 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
 import MenuIcon from '@mui/icons-material/Menu';
 import styles from './HamburgerMenu.module.css';
 
@@ -37,19 +36,20 @@ const HamburgerMenu = () => {
           MenuListProps={{
             'aria-labelledby': 'menu-button',
           }}
+          classes={{ paper: styles.menuPaper }}
         >
-        <MenuItem onClick={ () => {
-          handleClose();
-          navigate('/about')
-        } }>About</MenuItem>
-        <MenuItem onClick={ () => {
-          handleClose();
-          navigate('/projects')
-        } }>Projects</MenuItem>
-        <MenuItem onClick={ () => {
-          handleClose();
-          navigate('/Contact')
-        } }>Contact</MenuItem>
+          <div className={styles.menuItem} onClick={ () => {
+            handleClose();
+            navigate('/about')
+          } }>About</div>
+          <div className={styles.menuItem} onClick={ () => {
+            handleClose();
+            navigate('/projects')
+          } }>Projects</div>
+          <div className={styles.menuItem} onClick={ () => {
+            handleClose();
+            navigate('/contact')
+          } }>Contact</div>
         </Menu>
       </div>
     </div>
