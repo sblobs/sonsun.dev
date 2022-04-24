@@ -176,6 +176,10 @@ textarea {
     font-size: 14px;
   }
 
+  .alert {
+    height: 29px;
+  }
+
   .content {
     margin: 0;
     width: 85%;
