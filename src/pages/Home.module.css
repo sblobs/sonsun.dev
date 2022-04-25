@@ -41,6 +41,7 @@
 @media(max-width: 711px) {
   .main{
     font-size: 14px;
+    height: 90.5vh;
   }
 
   .title {
