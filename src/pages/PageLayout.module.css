@@ -59,6 +59,10 @@
 textarea {
   resize: none;
   height: 100px;
+  letter-spacing: inherit;
+  font-weight: inherit;
+  font-size: inherit;
+  font-family: inherit;
 }
 
 .sendWrapper {
@@ -172,12 +176,13 @@ textarea {
     display: block;
   }
 
-  .main, .sendBtn {
+  .main, .sendBtn, .alert {
     font-size: 14px;
   }
 
   .alert {
     height: 29px;
+    width: 240px;
   }
 
   .content {
@@ -192,7 +197,7 @@ textarea {
   }
 }
 
-@media(max-width: 367px) {
+@media(max-width: 355px) {
   .alert {
     position: fixed;
     bottom: 1.5%;
