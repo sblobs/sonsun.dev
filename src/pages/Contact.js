@@ -63,6 +63,7 @@ const ContactPage = () => {
     })
     const t = setTimeout(() => {
       setTimeoutHandles([]);
+      setShowingSuccess(false);
       setShowingError(false);
     }, 5000);
     setTimeoutHandles([...timeoutHandles, t]);
@@ -75,6 +76,7 @@ const ContactPage = () => {
     })
     const t = setTimeout(() => {
       setTimeoutHandles([]);
+      setShowingError(false);
       setShowingSuccess(false);
     }, 5000);
     setTimeoutHandles([...timeoutHandles, t]);
