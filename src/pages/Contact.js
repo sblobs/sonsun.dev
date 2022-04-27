@@ -1,5 +1,6 @@
 import React from 'react';
-import styles from './PageLayout.module.css';
+import pageStyles from './PageLayout.module.css';
+import contactStyles from './Contact.module.css';
 import SideBar from '../components/SideBar';
 import HamburgerMenu from '../components/HamburgerMenu';
 import CircularProgress from '@mui/material/CircularProgress';
@@ -82,14 +83,14 @@ const ContactPage = () => {
     setTimeoutHandles([...timeoutHandles, t]);
   }
 
-  return <div className={styles.main}>
+  return <div className={pageStyles.main}>
     <HamburgerMenu />
     <SideBar />
-    <div className={styles.content}>
-      <div className={styles.title}>Contact</div>
+    <div className={pageStyles.content}>
+      <div className={pageStyles.title}>Contact</div>
       Your name <br />
       <input
-        className={styles.inputField}
+        className={contactStyles.inputField}
         name='name'
         type='text'
         value={name}
@@ -97,7 +98,7 @@ const ContactPage = () => {
       />
       Your email <br />
       <input
-        className={styles.inputField}
+        className={contactStyles.inputField}
         name='email'
         type='email'
         value={email}
@@ -105,36 +106,46 @@ const ContactPage = () => {
       />
       Message <br />
       <textarea
-        className={styles.inputField}
+        className={contactStyles.inputField}
         name='message'
         type='text'
         value={msg}
         onChange={ e => setMsg(e.target.value) }
       />
       <br />
-      <div className={styles.sendWrapper}>
-        <button className={styles.sendBtn} onClick={sendEmail}>Send</button>
+      <div className={contactStyles.sendWrapper}>
+        <button className={contactStyles.sendBtn} onClick={sendEmail}>
+          Send
+        </button>
         {loading &&
-        <div className={styles.loading}>
+        <div className={contactStyles.loading}>
           <CircularProgress size={20} color='inherit'/>
         </div>}
 
-        <div className={`${styles.alert} ${styles.alertSuccess}
-          ${showingSuccess ? styles.alertShown : styles.alertHidden}`}>
-          <div className={styles.alertMsg}>
+        <div className={`${contactStyles.alert} ${contactStyles.alertSuccess}
+          ${showingSuccess
+            ? contactStyles.alertShown
+            : contactStyles.alertHidden}`
+          }>
+          <div className={contactStyles.alertMsg}>
             Message sent successfully :)
           </div>
         </div>
-        <div className={`${styles.alert} ${styles.alertError}
-          ${showingError ? (styles.alertShown) : styles.alertHidden}`}>
-          <div className={styles.alertMsg}>
-            <ErrorOutlineIcon className={styles.errorIcon} sx={{ fontSize: 20 }}/>
+        <div className={`${contactStyles.alert} ${contactStyles.alertError}
+          ${showingError
+            ? (contactStyles.alertShown)
+            : contactStyles.alertHidden}`
+          }>
+          <div className={contactStyles.alertMsg}>
+            <ErrorOutlineIcon
+              className={contactStyles.errorIcon}
+              sx={{ fontSize: 20 }}/>
             {error}
           </div>
         </div>
       </div>
     </div>
-    <div className={styles.mobileFooter}></div>
+    <div className={pageStyles.mobileFooter}></div>
   </div>
 }
 
