@@ -122,6 +122,7 @@ textarea {
   .alert {
     height: 29px;
     width: 240px;
+    background-color: #201f3e;
   }
 
   textarea {
@@ -137,5 +138,6 @@ textarea {
     width: 95%;
     box-shadow: none;
     margin: 0;
+    background-color: #2c2b4a;
   }
 }

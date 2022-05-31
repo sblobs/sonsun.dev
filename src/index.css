@@ -5,6 +5,7 @@ body {
     sans-serif;
   -webkit-font-smoothing: ntialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow: hidden;
 }
 
 @font-face {
