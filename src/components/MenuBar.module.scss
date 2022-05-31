@@ -30,11 +30,13 @@
 	flex: 1;
 	border-left: $border-styles;
 }
+
 .btn_first {
 	-webkit-flex: 1;
 	flex: 1;
 	border: none;
 }
+
 @media (max-width: 711px) {
 	.navBar {
 		flex-direction: column;
