@@ -1,3 +1,5 @@
+@import "../utils/variables.scss";
+
 .main {
   letter-spacing: 1px;
   font-weight: 300;
@@ -6,16 +8,16 @@
   display: flex;
   flex-direction: row;
   justify-content: center;
-  color: rgb(245, 245, 245);
+  color: $text-color;
   position: relative;
-  font-size: 16px;
+  font-size: $content-size;
 }
 
 .title {
   letter-spacing: 1.3px;
   padding-bottom: 12px;
   margin-bottom: 15px;
-  border-bottom: 1px solid rgb(203, 216, 235);
+  border-bottom: $border-styles;
   text-align: center;
   font-weight: 420;
   cursor: default;
@@ -49,7 +51,7 @@
   .main{
     height: 90%;
     flex-direction: column;
-    font-size: 14px;
+    font-size: $content-size-smallscreen;
   }
 
   .title {

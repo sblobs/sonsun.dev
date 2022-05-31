@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types'
 import { useNavigate } from 'react-router-dom';
-import basicStyles from './NavBtn.module.css';
-import menuStyles from './MenuBar.module.css';
+import basicStyles from './NavBtn.module.scss';
+import menuStyles from './MenuBar.module.scss';
 
 const MenuBtn = ({ onClickRoute, text, first }) => {
   const navigate = useNavigate();

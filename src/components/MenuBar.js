@@ -1,6 +1,6 @@
 import React from 'react';
 import MenuBtn from './MenuBtn';
-import styles from './MenuBar.module.css';
+import styles from './MenuBar.module.scss';
 
 const MenuBar = () => {
   return <div className={styles.main}>

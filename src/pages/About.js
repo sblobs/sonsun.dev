@@ -1,5 +1,5 @@
 import React from 'react';
-import styles from './PageLayout.module.css';
+import styles from './PageLayout.module.scss';
 import SideBar from '../components/SideBar';
 import HamburgerMenu from '../components/HamburgerMenu';
 import About from '../data/AboutData';

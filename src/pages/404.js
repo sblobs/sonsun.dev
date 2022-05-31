@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import SideBar from '../components/SideBar';
 import HamburgerMenu from '../components/HamburgerMenu';
-import styles from './PageLayout.module.css';
+import styles from './PageLayout.module.scss';
 
 const NotFoundPage = () => {
   const navigate = useNavigate();

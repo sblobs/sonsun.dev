@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import SideBtn from './SideBtn';
-import styles from './SideBar.module.css';
+import styles from './SideBar.module.scss';
 
 const SideBar = () => {
   const navigate = useNavigate();

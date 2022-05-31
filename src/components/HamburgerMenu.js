@@ -2,7 +2,7 @@ import React from 'react';
 import { useNavigate } from 'react-router-dom';
 import Menu from '@mui/material/Menu';
 import MenuIcon from '@mui/icons-material/Menu';
-import styles from './HamburgerMenu.module.css';
+import styles from './HamburgerMenu.module.scss';
 
 const HamburgerMenu = () => {
   const navigate = useNavigate();
