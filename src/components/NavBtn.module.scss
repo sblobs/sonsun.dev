@@ -1,7 +1,7 @@
 @import "../utils/variables.scss";
 
 .btn {
-	font-weight: 300;
+	font-weight: $content-weight;
 	text-transform: capitalize;
 	height: 100%;
 	width: 100%;
@@ -9,15 +9,15 @@
 	cursor: pointer;
 	transition: background-color .3s;
 	z-index: 10;
-	letter-spacing: 1px;
+	letter-spacing: $content-letter-spacing;
 	font-size: $content-size;
-	font-family: Inter, sans-serif;
+	font-family: $content-font-family;
 	align-items: center;
 	justify-content: center;
 	box-sizing: border-box;
 	display: -webkit-flexbox;
 	&:hover {
-		background-color: rgba(104, 103, 138, 0.35);
+		background-color: $btn-hover-color;
 	}
 }
 

@@ -33,7 +33,7 @@ textarea {
 	font-family: inherit;
 	font-weight: inherit;
 	font-size: $content-size;
-	letter-spacing: 1px;
+	letter-spacing: $content-letter-spacing;
 	color: $text-color;
 	border: $border-styles;
 	border-radius: 5px;
@@ -44,12 +44,12 @@ textarea {
 	box-sizing: border-box;
 	transition: background-color .3s;
 	&:hover {
-		background-color: rgba(104, 103, 138, 0.35);
+		background-color: $btn-hover-color;
 	}
 }
 
 .alert {
-	letter-spacing: 1px;
+	letter-spacing: $content-letter-spacing;
 	opacity: 50;
 	position: absolute;
 	margin: 2px 12px;
