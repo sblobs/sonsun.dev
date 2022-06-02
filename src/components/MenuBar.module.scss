@@ -8,6 +8,7 @@
 	align-items: center;
 	justify-content: center;
 	color: $text-color;
+  margin-bottom: 26px;
 }
 
 .navBar {
@@ -20,31 +21,35 @@
 	justify-content: center;
 	box-sizing: border-box;
 	background-color: rgba(25,25,25, 0.4);
-	border: $border-styles;
-	border-radius: 5px;
 	overflow: hidden;
 }
 
 .btn_mid {
 	-webkit-flex: 1;
 	flex: 1;
-	border-left: $border-styles;
+  border: $border-styles;
+  border-radius: 5px;
+  margin-left: 10.5px;
 }
 
 .btn_first {
 	-webkit-flex: 1;
 	flex: 1;
 	border: none;
+  border: $border-styles;
+  border-radius: 5px;
 }
 
 @media (max-width: 711px) {
 	.navBar {
 		flex-direction: column;
-		height: 130px;
+		height: 133px;
 		width: 48vw;
 	}
 	.btn_mid {
-		border-left: none;
-		border-top: $border-styles;
+		// border-left: none;
+    margin-left: 0px;
+    margin-top: 7.2px;
+		// border-top: $border-styles;
 	}
 }

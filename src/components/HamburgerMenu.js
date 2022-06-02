@@ -36,12 +36,20 @@ const HamburgerMenu = () => {
           MenuListProps={{
             'aria-labelledby': 'menu-button',
           }}
-          classes={{ paper: styles.menuPaper }}
+          classes={{
+            paper: styles.menuPaper,
+            list: styles.menuList
+          }}
+          transformOrigin={{
+            vertical: 'top',
+            horizontal: 'mid'
+          }}
         >
-          <div className={styles.menuItem} onClick={ () => {
-            handleClose();
-            navigate('/about')
-          } }>About</div>
+          <div className={`${styles.menuItem} ${styles.firstItem}`}
+            onClick={ () => {
+              handleClose();
+              navigate('/about')
+            } }>About</div>
           <div className={styles.menuItem} onClick={ () => {
             handleClose();
             navigate('/projects')
