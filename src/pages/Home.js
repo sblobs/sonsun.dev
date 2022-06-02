@@ -12,7 +12,10 @@ const HomePage = () => {
       Penultimate year computer science/ media arts student at UNSW.
     </div>
     <MenuBar />
-    <GitHubIcon />
+    <a href='https://github.com/sblobs' rel='noreferrer' target='_blank'
+      title='Github' aria-label='Link to Github'>
+      <GitHubIcon className={styles.githubIcon} aria-label='Github icon'/>
+    </a>
   </div>
 }
 

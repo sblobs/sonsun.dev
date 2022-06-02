@@ -88,24 +88,27 @@ const ContactPage = () => {
     <SideBar />
     <div className={pageStyles.content}>
       <div className={pageStyles.title}>Contact</div>
-      Your name <br />
+      <label htmlFor='nameInput'>Your name</label>
       <input
         className={contactStyles.inputField}
+        id='nameInput'
         name='name'
         type='text'
         value={name}
         onChange={ e => setName(e.target.value) }
       />
-      Your email <br />
+      <label htmlFor='emailInput'>Your email</label>
       <input
         className={contactStyles.inputField}
+        id='emailInput'
         name='email'
         type='email'
         value={email}
         onChange={ e => setEmail(e.target.value) }
       />
-      Message <br />
+      <label htmlFor='messageInput'>Message</label>
       <textarea
+        id='messageInput'
         className={contactStyles.inputField}
         name='message'
         type='text'
@@ -114,7 +117,8 @@ const ContactPage = () => {
       />
       <br />
       <div className={contactStyles.sendWrapper}>
-        <button className={contactStyles.sendBtn} onClick={sendEmail}>
+        <button className={contactStyles.sendBtn}
+          onClick={sendEmail} aria-label='Send email'>
           Send
         </button>
         {loading &&
@@ -127,7 +131,8 @@ const ContactPage = () => {
             ? contactStyles.alertShown
             : contactStyles.alertHidden}`
           }>
-          <div className={contactStyles.alertMsg}>
+          <div className={contactStyles.alertMsg}
+            aria-label='Success'>
             Message sent successfully :)
           </div>
         </div>
@@ -136,7 +141,8 @@ const ContactPage = () => {
             ? (contactStyles.alertShown)
             : contactStyles.alertHidden}`
           }>
-          <div className={contactStyles.alertMsg}>
+          <div className={contactStyles.alertMsg}
+            aria-label='Error'>
             <ErrorOutlineIcon
               className={contactStyles.errorIcon}
               sx={{ fontSize: 20 }}/>
