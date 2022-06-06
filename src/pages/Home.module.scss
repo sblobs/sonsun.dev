@@ -43,10 +43,23 @@
 }
 
 .githubIcon {
+  font-size: 26px !important;
   &:hover {
     cursor: pointer;
   }
-  font-size: 26px !important;
+}
+
+.icon_bounce {
+	height: 100%;
+	width: 100%;
+	flex: 1;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: .3s cubic-bezier(0, 1.2, .2, 1.5);
+	&:hover {
+		transform: scale(1.08, 1.08);
+	}
 }
 
 a, a:hover, a:visited, a:active {

@@ -14,7 +14,7 @@ const HomePage = () => {
     <MenuBar />
     <a href='https://github.com/sblobs' rel='noreferrer' target='_blank'
       title='Github' aria-label='Link to Github'>
-      <GitHubIcon className={styles.githubIcon} aria-label='Github icon'/>
+      <GitHubIcon className={`${styles.githubIcon} ${styles.icon_bounce}`} aria-label='Github icon'/>
     </a>
   </div>
 }
