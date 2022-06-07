@@ -45,19 +45,30 @@ const HamburgerMenu = () => {
             horizontal: 'mid'
           }}
         >
-          <div className={`${styles.menuItem} ${styles.firstItem}`}
-            onClick={ () => {
+          <div className={`${styles.menuItem} ${styles.firstItem}`}>
+            <span className={`${styles.bounce}`} onClick={ () => {
               handleClose();
               navigate('/about')
-            } }>About</div>
-          <div className={styles.menuItem} onClick={ () => {
-            handleClose();
-            navigate('/projects')
-          } }>Projects</div>
-          <div className={styles.menuItem} onClick={ () => {
-            handleClose();
-            navigate('/contact')
-          } }>Contact</div>
+            } }>
+              About
+            </span>
+          </div>
+          <div className={styles.menuItem}>
+            <span className={`${styles.bounce}`} onClick={ () => {
+              handleClose();
+              navigate('/projects')
+            } }>
+              Projects
+            </span>
+          </div>
+          <div className={styles.menuItem}>
+            <span className={`${styles.bounce}`} onClick={ () => {
+              handleClose();
+              navigate('/contact')
+            } }>
+              Contact
+            </span>
+          </div>
         </Menu>
       </div>
     </div>

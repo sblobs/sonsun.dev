@@ -9,14 +9,14 @@ const SideBtn = ({ onClickRoute, text, first }) => {
   return <>
     {first
       ? <div className={`${basicStyles.btn} ${sideStyles.btn_first}`}>
-          <span className={`${basicStyles.btn_bounce}`} onClick={
+          <span className={`${basicStyles.bounce}`} onClick={
             () => { navigate(onClickRoute) }
           }>
             {text}
           </span>
         </div>
       : <div className={`${basicStyles.btn} ${sideStyles.btn_mid}`}>
-          <span className={`${basicStyles.btn_bounce}`} onClick={
+          <span className={`${basicStyles.bounce}`} onClick={
               () => { navigate(onClickRoute) }
             }>
             {text}
