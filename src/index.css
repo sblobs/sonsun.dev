@@ -43,6 +43,7 @@ html, body, #root {
     #070725, 
     #2c2b4a
   );
+  overflow: hidden;
 }
 
 code {
