@@ -120,8 +120,8 @@ textarea {
 	}
 	.alert {
 		font-size: $content-size-smallscreen;
-		height: 29px;
-		width: 240px;
+		height: 30px;
+		width: 250px;
 		background-color: #201f3e;
 	}
 	textarea {
@@ -129,7 +129,7 @@ textarea {
 	}
 }
 
-@media (max-width: 355px) {
+@media (max-width: 369px) {
 	.alert {
 		position: fixed;
 		bottom: 1.5%;
