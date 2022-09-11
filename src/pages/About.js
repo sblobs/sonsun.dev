@@ -13,6 +13,9 @@ const AboutPage = () => {
     <div className={styles.content}>
       <div className={styles.title}>About</div>
       {About.desc}
+      <br />
+      <br />
+      {About.links}
     </div>
     <div className={styles.mobileFooter}></div>
   </div>

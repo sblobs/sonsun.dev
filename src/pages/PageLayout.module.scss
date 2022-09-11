@@ -39,8 +39,8 @@
 
 .homelink {
   cursor: pointer;
-  color:rgb(208, 255, 249);
-  border-bottom: 1px solid rgb(208, 255, 249);
+  color: $link-color;
+  border-bottom: 1px solid $link-color;
 }
 
 .mobileFooter {
