@@ -8,7 +8,7 @@ const SideBar = () => {
   return <div className={styles.main}>
     <div className={styles.title} onClick={
       () => { navigate('/home') }
-    }> Sonia Sun </div>
+    }> Home </div>
     <div className={styles.navBar}>
       <SideBtn onClickRoute={'/about'} text={'about'} first></SideBtn>
       <SideBtn onClickRoute={'/projects'} text={'projects'}></SideBtn>
