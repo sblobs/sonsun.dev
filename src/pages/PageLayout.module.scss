@@ -1,40 +1,40 @@
 @import "../utils/variables.scss";
 
 .main {
-  letter-spacing: $content-letter-spacing;
-  font-weight: $content-weight;
-  height: 100%;
-  width: 100%;
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
-  color: $text-color;
-  position: relative;
-  font-size: $content-size;
+	letter-spacing: $content-letter-spacing;
+	font-weight: $content-weight;
+	height: 100%;
+	width: 100%;
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	color: $text-color;
+	position: relative;
+	font-size: $content-size;
 }
 
 .title {
-  letter-spacing: 1.3px;
-  padding-bottom: 12px;
-  margin-bottom: 16px;
-  border-bottom: $border-styles;
-  text-align: center;
-  font-weight: 420;
-  cursor: default;
-  font-size: 29px;
-  font-family: $title-font-family;
-  font-weight: bold;
+	letter-spacing: 1.3px;
+	padding-bottom: 12px;
+	margin-bottom: 16px;
+	border-bottom: $border-styles;
+	text-align: center;
+	font-weight: 420;
+	cursor: default;
+	font-size: 29px;
+	font-family: $title-font-family;
+	font-weight: bold;
 }
 
 .content {
-  align-self: center;
-  flex: 6;
-  margin-right: 13%;
-  padding: 12px;
-  background-color: rgba(25,25,25, 0.4);
-  border-radius: 5px;
-  font-family: $content-font-family;
-  cursor: default;
+	align-self: center;
+	flex: 6;
+	margin-right: 13%;
+	padding: 12px;
+	background-color: rgba(25,25,25, 0.4);
+	border-radius: 5px;
+	font-family: $content-font-family;
+	cursor: default;
 }
 
 .homelink {
@@ -44,26 +44,26 @@
 }
 
 .mobileFooter {
-  display: none;
+	display: none;
 }
 
 @media(max-width: 711px) {
-  .main{
-    height: 90%;
-    flex-direction: column;
-    font-size: $content-size-smallscreen;
-  }
-  .title {
-    font-size: 25px;
-  }
-  .mobileFooter {
-    flex-grow: 1;
-    display: block;
-  }
-  .content {
-    margin: 0;
-    width: 85%;
-    padding: 0;
-    background-color: transparent;
-  }
+	.main{
+		height: 90%;
+		flex-direction: column;
+		font-size: $content-size-smallscreen;
+	}
+	.title {
+		font-size: 25px;
+	}
+	.mobileFooter {
+		flex-grow: 1;
+		display: block;
+	}
+	.content {
+		margin: 0;
+		width: 85%;
+		padding: 0;
+		background-color: transparent;
+	}
 }
