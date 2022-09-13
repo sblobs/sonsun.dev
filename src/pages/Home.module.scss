@@ -4,7 +4,7 @@
 	letter-spacing: $content-letter-spacing;
 	font-weight: $content-weight;
 	font-size: $content-size;
-	height: 95.5vh;
+	height: 97vh;
 	color: $text-color;
 	display: flex;
 	flex-direction: column;
@@ -43,10 +43,10 @@
 }
 
 .githubIcon {
-  font-size: 26px !important;
-  &:hover {
-    cursor: pointer;
-  }
+	font-size: 26px !important;
+	&:hover {
+		cursor: pointer;
+	}
 }
 
 .icon_bounce {
@@ -79,5 +79,6 @@ a, a:hover, a:visited, a:active {
 
 	.content {
 		width: 85.5vw;
+		padding: 6px 0px 10px 0;
 	}
 }

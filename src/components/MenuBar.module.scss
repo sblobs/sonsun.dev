@@ -8,7 +8,7 @@
 	align-items: center;
 	justify-content: center;
 	color: $text-color;
-  margin-bottom: 26px;
+	margin-bottom: 25px;
 }
 
 .navBar {
@@ -27,27 +27,30 @@
 .btn_mid {
 	-webkit-flex: 1;
 	flex: 1;
-  border: $border-styles;
-  border-radius: 5px;
-  margin-left: 10.5px;
+	border: $border-styles;
+	border-radius: 5px;
+	margin-left: 10.5px;
 }
 
 .btn_first {
 	-webkit-flex: 1;
 	flex: 1;
 	border: none;
-  border: $border-styles;
-  border-radius: 5px;
+	border: $border-styles;
+	border-radius: 5px;
 }
 
 @media (max-width: 711px) {
+	.main {
+		margin-bottom: 20px;
+	}
 	.navBar {
 		flex-direction: column;
 		height: 145px;
 		width: 48vw;
 	}
 	.btn_mid {
-    margin-left: 0px;
-    margin-top: 7.2px;
+    	margin-left: 0px;
+    	margin-top: 7.2px;
 	}
 }
