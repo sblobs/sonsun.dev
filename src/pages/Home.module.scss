@@ -4,7 +4,7 @@
 	letter-spacing: $content-letter-spacing;
 	font-weight: $content-weight;
 	font-size: $content-size;
-	height: 97vh;
+	height: 99.5vh;
 	color: $text-color;
 	display: flex;
 	flex-direction: column;
@@ -70,7 +70,6 @@ a, a:hover, a:visited, a:active {
 @media (max-width: 711px) {
 	.main {
 		font-size: $content-size-smallscreen;
-		height: 90vh;
 	}
 
 	.title {
@@ -79,6 +78,16 @@ a, a:hover, a:visited, a:active {
 
 	.content {
 		width: 85.5vw;
+		padding: 6px 0px 13px 0;
+	}
+}
+
+@media (max-width: 420px) {
+	.main {
+		height: 90vh;
+	}
+
+	.content {
 		padding: 6px 0px 10px 0;
 	}
 }
