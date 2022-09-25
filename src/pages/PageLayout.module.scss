@@ -29,7 +29,7 @@
 .content {
 	align-self: center;
 	flex: 6;
-	margin-right: 13%;
+	margin-right: min(11.7%, 75px);
 	padding: 12px;
 	background-color: rgba(25,25,25, 0.4);
 	border-radius: 5px;
