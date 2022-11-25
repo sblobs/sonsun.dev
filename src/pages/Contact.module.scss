@@ -17,7 +17,7 @@
 
 textarea {
 	resize: none;
-	height: 100px;
+	height: 185px;
 	letter-spacing: inherit;
 	font-weight: inherit;
 	font-size: inherit;
@@ -46,6 +46,7 @@ textarea {
 	&:hover {
 		background-color: $btn-hover-color;
 	}
+	height: 31px;
 }
 
 .alert {
@@ -60,9 +61,9 @@ textarea {
 	font-size: $content-size;
 	border-radius: 5px;
 	background-color: #1b1b2d;
-	height: 31.5px;
 	width: 260px;
 	box-sizing: border-box;
+	height: 31px;
 }
 
 .alertSuccess {
@@ -120,12 +121,11 @@ textarea {
 	}
 	.alert {
 		font-size: $content-size-smallscreen;
-		height: 29px;
 		width: 240px;
 		background-color: #201f3e;
 	}
 	textarea {
-		height: 27%;
+		height: 30%;
 	}
 }
 
