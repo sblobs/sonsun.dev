@@ -86,6 +86,18 @@ const App = () => {
         value: 1.3
       }
     },
+    responsive: [
+      {
+        maxWidth: 450,
+        options: {
+          interactivity: {
+            events: {
+              onclick: { enable: false, mode: 'push' },
+            }
+          }
+        }
+      }
+    ],
     retina_detect: true
   };
 
