@@ -115,7 +115,7 @@ textarea {
 	height: 31.5px;
 }
 
-@media (max-width: 711px) {
+@media (max-width: 735px) {
 	.sendBtn {
 		font-size: $content-size-smallscreen;
 	}
@@ -129,7 +129,7 @@ textarea {
 	}
 }
 
-@media (max-width: 355px) {
+@media (max-width: 358px) {
 	.alert {
 		position: fixed;
 		bottom: 1.5%;

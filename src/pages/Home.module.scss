@@ -12,6 +12,12 @@
 	justify-content: center;
 	box-sizing: border-box;
 	font-family: $content-font-family;
+	& svg {
+		height: 26px;
+		&:hover {
+			cursor: pointer;
+		}
+	}
 }
 
 .title {
@@ -42,13 +48,6 @@
 	}
 }
 
-.githubIcon {
-	font-size: 26px !important;
-	&:hover {
-		cursor: pointer;
-	}
-}
-
 .icon_bounce {
 	height: 100%;
 	width: 100%;
@@ -67,7 +66,7 @@ a, a:hover, a:visited, a:active {
   text-decoration: none;
 }
 
-@media (max-width: 711px) {
+@media (max-width: 735px) {
 	.main {
 		font-size: $content-size-smallscreen;
 	}

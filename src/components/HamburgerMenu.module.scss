@@ -11,7 +11,7 @@
 	justify-content: center;
 	height: 7vh;
 	box-sizing: border-box;
-	margin: 2.5vh 0vh 2.5vh 0vh;
+	margin: 2vh 0vh 2.5vh 0vh;
 }
 
 .wrapper {
@@ -104,14 +104,18 @@
 	cursor: pointer;
 }
 
-@media (max-width: 420px) {
+@media (max-width: 358px) {
 	.main {
 		margin: 1.8vh 0vh 2.5vh 0vh;
 	}
 }
 
-@media (min-width: 711px) {
+@media (min-width: 735px) {
 	.main {
 		display: none;
 	}
+
+  .menuPaper {
+    display: none;
+  }
 }
