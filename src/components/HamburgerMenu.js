@@ -40,9 +40,13 @@ const HamburgerMenu = () => {
             paper: styles.menuPaper,
             list: styles.menuList
           }}
+          anchorOrigin={{
+            vertical: 'bottom',
+            horizontal: 'right',
+          }}
           transformOrigin={{
             vertical: 'top',
-            horizontal: 'mid'
+            horizontal: 'right'
           }}
         >
           <div className={`${styles.menuItem} ${styles.firstItem}`}>
