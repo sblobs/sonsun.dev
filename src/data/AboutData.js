@@ -3,7 +3,7 @@ import styles from './AboutData.module.scss';
 
 const About = {
   desc: <>Hi! I&apos;m Sonia, a penultimate year computer science and media
-  arts student at UNSW. In my spare time, I enjoy drawing, cooking and learning
+  arts student at UNSW. In my spare time, I enjoy knitting and learning
   to make music.</>,
   links: <div className={styles.linkGroup}>
     <div>
